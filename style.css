@@ -165,3 +165,469 @@ button:hover {
 }
 
 /* #endregion */
+
+/* =====================================
+   PÁGINA DA CALCULADORA - FIT LIFE
+===================================== */
+
+.body-calculadora {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(17, 17, 17, 0.82),
+            rgba(17, 17, 17, 0.82)
+        ),
+        url("imagens/fundodacalculadora.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--branco);
+    font-family: Arial, sans-serif;
+    display: block;
+}
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.calculadora-header {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(17, 17, 17, 0.92);
+    padding: 25px 8%;
+    border-bottom: 3px solid var(--verde);
+}
+.calculadora-header h1 {
+    margin: 0;
+    color: var(--verde);
+    font-size: 32px;
+}
+.calculadora-header p {
+    margin: 5px 0 0;
+    color: var(--cinza);
+}
+
+/* =====================================
+   CONTEÚDO DA PÁGINA
+===================================== */
+
+.pagina-calculadora {
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 35px 20px 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* =====================================
+   CARDS
+===================================== */
+
+.calculadora-card {
+    background-color: rgba(28, 28, 28, 0.95);
+    border: 1px solid #303030;
+    border-radius: 18px;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+.calculadora-card:hover {
+    border-color: var(--verde);
+    transform: translateY(-2px);
+}
+.calculadora-card h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--branco);
+}
+.calculadora-card > p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: var(--cinza);
+    line-height: 1.5;
+}
+
+/* =====================================
+   CAMPOS
+===================================== */
+
+.campo-calculadora {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.campo-calculadora label {
+    margin-bottom: 8px;
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: bold;
+}
+.campo-calculadora input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin: 0;
+    background-color: #292929;
+    color: var(--branco);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.campo-calculadora input::placeholder {
+    color: #777777;
+}
+.campo-calculadora input:focus {
+    border-color: var(--verde);
+}
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+.calculadora-card button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--verde);
+    color: var(--fundo);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.calculadora-card button:hover {
+    background-color: #9FE62F;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   RESULTADOS
+===================================== */
+
+.resultado-calculadora {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #292929;
+    border-radius: 12px;
+    text-align: center;
+}
+.resultado-calculadora h3 {
+    margin: 0;
+    color: var(--cinza);
+    font-size: 16px;
+}
+.resultado-calculadora p {
+    margin: 10px 0;
+    color: var(--verde);
+    font-size: 34px;
+    font-weight: bold;
+}
+.resultado-calculadora span {
+    color: var(--branco);
+    font-size: 14px;
+}
+
+/* =====================================
+   CRONÔMETRO
+===================================== */
+
+.cronometro-card {
+    grid-column: 1 / -1;
+}
+.cronometro-display {
+    margin-bottom: 20px;
+    padding: 30px;
+    background-color: #292929;
+    border-radius: 14px;
+    text-align: center;
+}
+#cronometro {
+    margin: 0;
+    color: var(--verde);
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* =====================================
+   BOTÕES DO CRONÔMETRO
+===================================== */
+
+.botoes-cronometro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+#pausar-cronometro {
+    background-color: #e5e5e5;
+    color: #111111;
+}
+#zerar-cronometro {
+    background-color: #9d9d9d;
+    color: #111111;
+}
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 700px) {
+    .pagina-calculadora {
+        grid-template-columns: 1fr;
+
+        padding: 25px 15px 50px;
+    }
+    .cronometro-card {
+        grid-column: auto;
+    }
+    .botoes-cronometro {
+        grid-template-columns: 1fr;
+    }
+    #cronometro {
+        font-size: 36px;
+
+        letter-spacing: 1px;
+    }
+    .calculadora-header {
+        padding: 20px;
+    }
+}
+
+/*================================
+Treinos - Fit Flife
+================================*/
+
+.body-treinos {
+    margin: 0;
+    min-height: 100vh;
+    display: block;
+    background: var(--fundo);
+    color: var(--branco);
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Fundo da Pagina*/
+.body-treinos::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("imagens/fundotreino.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.12;
+    z-index: 0;
+    pointer-events: none;
+}
+.body-treinos .treino-header,
+.body-treinos .pagina-treinos{
+    position: relative;
+    z-index: 1;
+}
+
+/*========================
+Cabeçalho
+========================*/
+
+.treino-header{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 8%;
+    background-color: rgba(17, 17, 17, 0.94);
+    border-bottom: 3px solid var(--verde);
+}
+.treino-header h1{
+    margin: 0;
+    color: var(--verde);
+    font-size: 32px;
+}
+.treino-header p{
+    margin: 5px 0 0;
+    color: var(--cinza);
+}
+
+/*===================
+Conteudo
+===================*/
+.pagina-treinos{
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 35px 20px 60px;
+}
+/*=====================
+Progresso do Treino
+=====================*/
+
+.resumo-treino{
+    padding: 25px;
+    margin-bottom: 35px;
+    background-color: rgba(28, 28, 28, 0.95);
+    border: 1px solid #303030;
+    border-radius: 18px;
+}
+.resumo-treino p{
+    margin: 0 0 15px;
+    color: var(--cinza);
+}
+.resumo-treino h2{
+    margin: 0 0 15px;
+    color: var(--branco);
+}
+.barra-progresso{
+    width: 100%;
+    height: 10px;
+    background-color: #333333;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#progresso-treino{
+    width: 0%;
+    height: 100%;
+    background-color: var(--verde);
+    border-radius: 20px;
+    transition: width 0.4s;
+}
+
+/*=======================
+Grupo Musculares
+=======================*/
+
+.grupo-treino {
+    margin-bottom: 35px;
+}
+.titulo-grupo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.titulo-grupo h2 {
+    margin: 0;
+    color: var(--branco);
+    font-size: 25px;
+}
+.titulo-grupo span {
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/*=======================
+Cards dos Exercícios
+=======================*/
+
+.card-exercicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    margin-bottom: 15px;
+    background-color: rgba(28, 28, 28, 0.95);
+    border: 1px solid #303030;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+.card-exercicio:hover {
+    transform: translateY(-3px);
+    border-color: var(--verde);
+}
+.info-exercicio h3 {
+    margin: 0 0 12px;
+    color: var(--branco);
+    font-size: 19px;
+}
+
+/*=======================
+Dados dos Exercícios
+=======================*/
+
+.dados-exercicio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.dados-exercicio span {
+    padding: 7px 11px;
+    background-color: #292929;
+    color: #c5c5c5;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/*=======================
+Botão Concluir
+=======================*/
+
+.botao-concluir {
+    cursor: pointer;
+}
+.botao-concluir input {
+    display: none;
+}
+.botao-concluir span {
+    display: inline-block;
+    padding: 11px 18px;
+    background-color: #292929;
+    color: var(--branco);
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.botao-concluir span:hover {
+    border-color: var(--verde);
+}
+.botao-concluir input:checked + span {
+    background-color: var(--verde);
+    color: var(--fundo);
+    border-color: var(--verde);
+}
+
+/*=======================
+Exercício Concluído
+=======================*/
+
+.card-exercicio.concluido {
+    opacity: 0.6;
+}
+
+/*=======================
+Celular
+=======================*/
+
+@media (max-width: 600px) {
+    .treino-header {
+        padding: 20px;
+    }
+    .pagina-treinos {
+        padding: 25px 15px 50px;
+    }
+    .card-exercicio {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .botao-concluir {
+        width: 100%;
+    }
+    .botao-concluir span {
+        display: block;
+        text-align: center;
+    }
+    .titulo-grupo {
+        gap: 10px;
+    }
+}
+/*#endregion*/
