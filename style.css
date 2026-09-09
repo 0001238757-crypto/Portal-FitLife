@@ -8,10 +8,21 @@
     --cinza: #AFAFAF;
 }
 
+
 /* #region informações gerais do site */
 
 body {
-    background-color: var(--fundo);
+    background:
+        linear-gradient(
+            rgba(17, 17, 17, 0.75),
+            rgba(17, 17, 17, 0.75)
+        ),
+        url("imagens/fundo-musculacao.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: var(--branco);
 
     display: flex;
@@ -28,10 +39,11 @@ p {
 
 /* #endregion */
 
+
 /* #region parte do login */
 
 .caixa-login {
-    background-color: var(--card);
+    background-color: rgba(28, 28, 28, 0.0);
 
     padding: 30px;
     width: 320px;
@@ -39,18 +51,28 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     border-radius: 12px;
-    
 }
 
 .caixa-login h1 {
+    margin-bottom: 5px;
+
     color: var(--verde);
+
+    font-size: 36px;
 }
 
 .caixa-login h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
     color: var(--cinza);
+
     font-size: 16px;
+    font-weight: normal;
+
+    text-align: center;
 }
 
 form {
@@ -59,9 +81,12 @@ form {
 
 label {
     display: block;
+
     margin-bottom: 5px;
 
     color: var(--branco);
+
+    font-size: 14px;
 }
 
 input {
@@ -75,27 +100,68 @@ input {
 
     border: 1px solid var(--cinza);
     border-radius: 5px;
-    
+
     box-sizing: border-box;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--verde);
 }
 
 button {
     width: 100%;
 
-    padding: 10xp;
+    padding: 10px;
 
     background-color: var(--verde);
-    color: #111111;
+    color: var(--fundo);
 
     border: none;
     border-radius: 5px;
 
+    font-weight: bold;
+
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #9fe62f
+    background-color: #9FE62F;
 }
 
+#mensagem-erro {
+    margin-top: 12px;
+
+    color: #FF4D4D;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+/* #endregion */
+
+
+/* #region celular */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px;
+
+        background-position: center;
+    }
+
+    .caixa-login {
+        width: 100%;
+        max-width: 320px;
+
+        padding: 25px;
+    }
+
+}
 
 /* #endregion */
