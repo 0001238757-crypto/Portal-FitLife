@@ -1,0 +1,101 @@
+/* caixa pra guardar cores */
+
+:root {
+    --verde: #B6FF3B;
+    --fundo: #111111;
+    --card: #1C1C1C;
+    --branco: #FFFFFF;
+    --cinza: #AFAFAF;
+}
+
+/* #region informações gerais do site */
+
+body {
+    background-color: var(--fundo);
+    color: var(--branco);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    margin: 0;
+}
+
+p {
+    color: var(--cinza);
+}
+
+/* #endregion */
+
+/* #region parte do login */
+
+.caixa-login {
+    background-color: var(--card);
+
+    padding: 30px;
+    width: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 12px;
+    
+}
+
+.caixa-login h1 {
+    color: var(--verde);
+}
+
+.caixa-login h2 {
+    color: var(--cinza);
+    font-size: 16px;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--branco);
+}
+
+input {
+    width: 100%;
+
+    padding: 10px;
+    margin-bottom: 15px;
+
+    background-color: var(--fundo);
+    color: var(--branco);
+
+    border: 1px solid var(--cinza);
+    border-radius: 5px;
+    
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+
+    padding: 10xp;
+
+    background-color: var(--verde);
+    color: #111111;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9fe62f
+}
+
+
+/* #endregion */
