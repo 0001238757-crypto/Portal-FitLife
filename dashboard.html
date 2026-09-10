@@ -2,15 +2,12 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>FitLife - Dashboard</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body class="pagina-dashboard">
@@ -47,123 +44,265 @@
 
     </div>
 
+
     <main class="conteudo-dashboard">
 
-    <section class="boas-vindas">
+        <section class="boas-vindas">
 
-        <h1>Bem-vindo à FitLife</h1>
+            <h1>Bem-vindo, Gabriel!</h1>
 
-        <p>
-            Acompanhe seu progresso e continue evoluindo.
-        </p>
+            <p>
+                Acompanhe seu progresso e continue evoluindo.
+            </p>
 
-    </section>
+        </section>
 
 
-    <section class="metas-semana">
+        <section class="metas-semana">
 
-        <h2>Metas da Semana</h2>
+            <h2>Metas da Semana</h2>
 
-        <div class="cards-metas">
+            <div class="cards-metas">
 
-            <div class="card-meta">
-                <h3>Treinos</h3>
-                <p>3 de 5 concluídos</p>
+                <div class="card-meta">
+
+                    <h3>Treinos</h3>
+
+                    <p id="meta-treinos">
+                        0 de 6 concluídos
+                    </p>
+
+                </div>
+
+
+                <div class="card-meta">
+
+                    <h3>Água</h3>
+
+                    <p id="meta-agua">
+                        Calcule sua recomendação
+                    </p>
+
+                </div>
+
+
+                <div class="card-meta">
+
+                    <h3>Aulas</h3>
+
+                    <p id="meta-aulas">
+                        0 aulas agendadas
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="card-meta">
-                <h3>Água</h3>
-                <p>12 de 14 litros</p>
+        </section>
+
+
+        <section class="progresso-semana">
+
+            <h2>Progresso dos Treinos</h2>
+
+            <div class="progresso-item">
+
+                <p>Exercícios concluídos</p>
+
+                <div class="barra">
+
+                    <div
+                        class="barra-preenchida"
+                        id="barra-dashboard-treinos">
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="card-meta">
-                <h3>Aulas</h3>
-                <p>2 de 3 realizadas</p>
+        </section>
+
+
+        <section class="proximas-aulas">
+
+            <h2>Próximas Aulas</h2>
+
+            <div id="proximas-aulas-dashboard">
+
+                <p>
+                    Nenhuma aula agendada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="resumo-saude">
+
+            <h2>Seus Dados de Saúde</h2>
+
+            <div class="cards-metas">
+
+                <div class="card-meta">
+
+                    <h3>Último IMC</h3>
+
+                    <p id="dashboard-imc">
+                        Ainda não calculado
+                    </p>
+
+                </div>
+
+
+                <div class="card-meta">
+
+                    <h3>Água Recomendada</h3>
+
+                    <p id="dashboard-agua">
+                        Ainda não calculado
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="dicas-saude">
+
+            <h2>Dicas de Saúde</h2>
+
+            <div class="dica">
+
+                <h3>💧 Hidratação</h3>
+
+                <p>
+                    Beba água ao longo do dia.
+                </p>
+
+            </div>
+
+
+            <div class="dica">
+
+                <h3>😴 Descanso</h3>
+
+                <p>
+                    O sono também faz parte do treino.
+                </p>
+
+            </div>
+
+
+            <div class="dica">
+
+                <h3>🥗 Alimentação</h3>
+
+                <p>
+                    Mantenha uma alimentação equilibrada.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="resultados-clientes">
+
+    <h2>Resultados dos nossos alunos</h2>
+
+    <p>
+        Veja a evolução de quem escolheu transformar seus hábitos.
+    </p>
+
+
+    <div class="lista-resultados">
+
+        <div class="resultado-card">
+
+            <h3>Evolução do aluno</h3>
+
+            <div class="antes-depois">
+
+                <div class="foto-resultado">
+
+                    <span>Antes</span>
+
+                    <img
+                        src="imagens/aluno1-antes.png"
+                        alt="Aluno antes da evolução"
+                    >
+
+                </div>
+
+
+                <div class="seta-evolucao">
+                    ➜
+                </div>
+
+
+                <div class="foto-resultado">
+
+                    <span>Depois</span>
+
+                    <img
+                        src="imagens/aluno1-depois.png"
+                        alt="Aluno depois da evolução"
+                    >
+
+                </div>
+
             </div>
 
         </div>
 
-    </section>
+        <div class="resultado-card">
+
+            <h3>Evolução do aluno</h3>
+
+            <div class="antes-depois">
+
+                <div class="foto-resultado">
+
+                    <span>Antes</span>
+
+                    <img
+                        src="imagens/aluno2-antes.png"
+                        alt="Aluno antes da evolução"
+                    >
+
+                </div>
 
 
-    <section class="progresso-semana">
+                <div class="seta-evolucao">
+                    ➜
+                </div>
 
-        <h2>Progresso da Semana</h2>
 
-        <div class="progresso-item">
+                <div class="foto-resultado">
 
-            <p>Treinos</p>
+                    <span>Depois</span>
 
-            <div class="barra">
-                <div class="barra-preenchida treinos"></div>
+                    <img
+                        src="imagens/aluno2-depois.png"
+                        alt="Aluno depois da evolução"
+                    >
+
+                </div>
+
             </div>
 
         </div>
 
+    </div>
 
-        <div class="progresso-item">
+</section>
 
-            <p>Água</p>
-
-            <div class="barra">
-                <div class="barra-preenchida agua"></div>
-            </div>
-
-        </div>
+    </main>
 
 
-        <div class="progresso-item">
-
-            <p>Aulas</p>
-
-            <div class="barra">
-                <div class="barra-preenchida aulas"></div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="proximas-aulas">
-
-        <h2>Próximas Aulas</h2>
-
-        <div class="aula">
-            <h3>Yoga</h3>
-            <p>Hoje - 18:00</p>
-        </div>
-
-        <div class="aula">
-            <h3>Crossfit</h3>
-            <p>Amanhã - 19:30</p>
-        </div>
-
-    </section>
-
-
-    <section class="dicas-saude">
-
-        <h2>Dicas de Saúde</h2>
-
-        <div class="dica">
-            <h3>💧 Hidratação</h3>
-            <p>Beba água ao longo do dia.</p>
-        </div>
-
-        <div class="dica">
-            <h3>😴 Descanso</h3>
-            <p>O sono também faz parte do treino.</p>
-        </div>
-
-        <div class="dica">
-            <h3>🥗 Alimentação</h3>
-            <p>Mantenha uma alimentação equilibrada.</p>
-        </div>
-
-    </section>
-
-</main>
+    <script src="script.js"></script>
 
 </body>
 

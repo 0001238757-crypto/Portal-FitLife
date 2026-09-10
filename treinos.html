@@ -1,135 +1,334 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Treinos- FITLIFE</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="body-treinos">
-        <header class="treino-header">
-            <div>
-                <h1>Fit Life</h1>
-                <p>Seu treino de hoje:</p>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Treinos - FitLife</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="body-treinos">
+
+    <div class="menu">
+
+        <a href="index.html">
+            <h2>FITLIFE</h2>
+        </a>
+
+        <div class="links-menu">
+
+            <a href="dashboard.html">
+                <h3>Dashboard</h3>
+            </a>
+
+            <a href="aulas.html">
+                <h3>Aulas</h3>
+            </a>
+
+            <a href="treinos.html">
+                <h3>Treinos</h3>
+            </a>
+
+            <a href="calculadora.html">
+                <h3>Calculadora</h3>
+            </a>
+
+            <a href="perfil.html">
+                <h3>Perfil</h3>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <header class="treino-header">
+
+        <h1>Treinos</h1>
+
+        <p>Seu treino de hoje</p>
+
+    </header>
+
+
+    <main class="pagina-treinos">
+
+        <section class="resumo-treino">
+
+            <p>Progresso do Treino</p>
+
+            <h2>
+
+                <span id="exercicios-concluidos">
+                    0
+                </span>
+
+                /
+
+                <span id="total-exercicios">
+                    6
+                </span>
+
+            </h2>
+
+
+            <div class="barra-progresso">
+
+                <div id="progresso-treino">
+                </div>
+
             </div>
-        </header>
-        <main class="pagina-treinos">
-            <section class="resumo-treino">
-                <div>
-                    <p>Progresso do Treino</p>
-                    <h2>
-                        <span id="exercicios-concluidos">0</span>
-                        /
-                        <span id="total-exercicios">6</span>
-                    </h2>
-                </div>
-                <div class="barra-progresso">
-                    <div id="progresso-treino"></div>
-                </div>
-            </section>
-            <section class="grupo-treino">
-                <div class="titulo-grupo">
-                    <h2>Peito</h2>
-                    <span>2 Exercicios</span>
-                </div>
-                <div class="card-exercicio">
-                    <div class="info-exercicio">
-                        <h3>Supino Reto</h3>
-                        <div class="dados-exercicio">
-                            <span>4 Series</span>
-                            <span>10 Repetições</span>
-                            <span>60s descanso</span>
-                        </div>
+
+        </section>
+
+
+        <section class="grupo-treino">
+
+            <div class="titulo-grupo">
+
+                <h2>Peito</h2>
+
+                <span>2 exercícios</span>
+
+            </div>
+
+
+            <div class="card-exercicio">
+
+                <div class="info-exercicio">
+
+                    <h3>Supino Reto</h3>
+
+                    <div class="dados-exercicio">
+
+                        <span>4 séries</span>
+
+                        <span>10 repetições</span>
+
+                        <span>60s descanso</span>
+
                     </div>
-                    <label class="botao-concluir">
-                        <input type="checkbox" class="exercicio-check">
-                        <span>Concluir</span>
-                    </label>
+
                 </div>
-                <div class="card-exercicio">
-                    <div class="info-exercicio">
-                        <h3>Crucifixo</h3>
-                        <div class="dados-exercicio">
-                            <span>3 Series</span>
-                            <span>12 Repetições</span>
-                            <span>45s descanso</span>
-                        </div>
+
+
+                <label class="botao-concluir">
+
+                    <input
+                        type="checkbox"
+                        class="exercicio-check"
+                    >
+
+                    <span>Concluir</span>
+
+                </label>
+
+            </div>
+
+
+            <div class="card-exercicio">
+
+                <div class="info-exercicio">
+
+                    <h3>Crucifixo</h3>
+
+                    <div class="dados-exercicio">
+
+                        <span>3 séries</span>
+
+                        <span>12 repetições</span>
+
+                        <span>45s descanso</span>
+
                     </div>
-                    <label class="botao-concluir">
-                        <input type="checkbox" class="exercicio-check">
-                        <span>Concluir</span>
-                    </label>
+
                 </div>
-            </section>
-            <section class="grupo-treino">
-                <div class="titulo-grupo">
-                    <h2>Costas</h2>
-                    <span>2 Exercicios</span>
-                </div>
-                <div class="card-exercicio">
-                    <div class="info-exercicio">
-                        <h3>Puxada Frontal</h3>
-                        <div class="dados-exercicio">
-                            <span>4 series</span>
-                            <span>10 repetições</span>
-                            <span>60s descanso</span>
-                        </div>
+
+
+                <label class="botao-concluir">
+
+                    <input
+                        type="checkbox"
+                        class="exercicio-check"
+                    >
+
+                    <span>Concluir</span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <section class="grupo-treino">
+
+            <div class="titulo-grupo">
+
+                <h2>Costas</h2>
+
+                <span>2 exercícios</span>
+
+            </div>
+
+
+            <div class="card-exercicio">
+
+                <div class="info-exercicio">
+
+                    <h3>Puxada Frontal</h3>
+
+                    <div class="dados-exercicio">
+
+                        <span>4 séries</span>
+
+                        <span>10 repetições</span>
+
+                        <span>60s descanso</span>
+
                     </div>
-                    <label class="botao-concluir">
-                        <input type="checkbox" class="exercicio-check">
-                        <span>Concluir</span>
-                    </label>
+
                 </div>
-                <div class="card-exercicio">
-                    <div class="info-exercicio">
-                        <h3>Remada Baixa</h3>
-                        <div class="dados-exercicio">
-                            <span>3 series</span>
-                            <span>12 repetições</span>
-                            <span> 60s descanso</span>
-                        </div>
+
+
+                <label class="botao-concluir">
+
+                    <input
+                        type="checkbox"
+                        class="exercicio-check"
+                    >
+
+                    <span>Concluir</span>
+
+                </label>
+
+            </div>
+
+
+            <div class="card-exercicio">
+
+                <div class="info-exercicio">
+
+                    <h3>Remada Baixa</h3>
+
+                    <div class="dados-exercicio">
+
+                        <span>3 séries</span>
+
+                        <span>12 repetições</span>
+
+                        <span>60s descanso</span>
+
                     </div>
-                    <label class="botao-concluir">
-                        <input type="checkbox" class="exercicio-check">
-                        <span>Concluir</span>
-                    </label>
+
                 </div>
-            </section>
-            <section class="grupo-treino">
-                <div class="titulo-grupo">
-                    <h2>Pernas</h2>
-                    <span>2 exercicios</span>
-                </div>
-                <div class="card-exercicio">
-                    <div class="info-exercicio">
-                        <h3>Agachamento Livre</h3>
-                        <div class="dados-exercicio">
-                            <span>4 series</span>
-                            <span>10 repetições</span>
-                            <span>90s descanso</span>
-                        </div>
+
+
+                <label class="botao-concluir">
+
+                    <input
+                        type="checkbox"
+                        class="exercicio-check"
+                    >
+
+                    <span>Concluir</span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <section class="grupo-treino">
+
+            <div class="titulo-grupo">
+
+                <h2>Pernas</h2>
+
+                <span>2 exercícios</span>
+
+            </div>
+
+
+            <div class="card-exercicio">
+
+                <div class="info-exercicio">
+
+                    <h3>Agachamento Livre</h3>
+
+                    <div class="dados-exercicio">
+
+                        <span>4 séries</span>
+
+                        <span>10 repetições</span>
+
+                        <span>90s descanso</span>
+
                     </div>
-                    <label class="botao-concluir">
-                        <input type="checkbox" class="exercicio-check">
-                        <span>Concluir</span>
-                    </label>
+
                 </div>
-                <div class="card-exercicio">
-                    <div class="info-exercicio">
-                        <h3>Leg Press</h3>
-                        <div class="dados-exercicio">
-                            <span>4 series</span>
-                            <span>12 repeticoes</span>
-                            <span>90s descanso</span>
-                        </div>
+
+
+                <label class="botao-concluir">
+
+                    <input
+                        type="checkbox"
+                        class="exercicio-check"
+                    >
+
+                    <span>Concluir</span>
+
+                </label>
+
+            </div>
+
+
+            <div class="card-exercicio">
+
+                <div class="info-exercicio">
+
+                    <h3>Leg Press</h3>
+
+                    <div class="dados-exercicio">
+
+                        <span>4 séries</span>
+
+                        <span>12 repetições</span>
+
+                        <span>90s descanso</span>
+
                     </div>
-                    <label class="botao-concluir">
-                        <input type="checkbox" class="exercicio-check">
-                        <span>Concluir</span>
-                    </label>
+
                 </div>
-                </section>
-                </main>
-                <script src="script.js"></script>
-    </body>
+
+
+                <label class="botao-concluir">
+
+                    <input
+                        type="checkbox"
+                        class="exercicio-check"
+                    >
+
+                    <span>Concluir</span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>

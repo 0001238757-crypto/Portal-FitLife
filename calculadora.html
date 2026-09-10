@@ -1,37 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora - Fit Life</title>
+
+    <title>Calculadora - FitLife</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body class="body-calculadora">
-    <header class="calculadora-header">
-        <div>
-            <h1>Fit Life</h1>
-            <p>Calculadora de Saúde</p>
+
+    <div class="menu">
+
+        <a href="index.html">
+            <h2>FITLIFE</h2>
+        </a>
+
+        <div class="links-menu">
+
+            <a href="dashboard.html">
+                <h3>Dashboard</h3>
+            </a>
+
+            <a href="aulas.html">
+                <h3>Aulas</h3>
+            </a>
+
+            <a href="treinos.html">
+                <h3>Treinos</h3>
+            </a>
+
+            <a href="calculadora.html">
+                <h3>Calculadora</h3>
+            </a>
+
+            <a href="perfil.html">
+                <h3>Perfil</h3>
+            </a>
+
         </div>
+
+    </div>
+
+
+    <header class="calculadora-header">
+
+        <h1>Calculadora de Saúde</h1>
+
+        <p>
+            Acompanhe seu IMC e sua hidratação.
+        </p>
+
     </header>
+
+
     <main class="pagina-calculadora">
+
+
         <section class="calculadora-card">
+
             <h2>Calculadora de IMC</h2>
-            <p>Descubra seu Índice de Massa Corporal</p>
+
+            <p>
+                Descubra seu Índice de Massa Corporal.
+            </p>
+
+
             <div class="campo-calculadora">
+
                 <label for="peso">
                     Peso (kg)
                 </label>
+
                 <input
                     type="number"
                     id="peso"
                     placeholder="Ex: 70"
                     min="1"
                 >
+
             </div>
+
+
             <div class="campo-calculadora">
+
                 <label for="altura">
                     Altura (m)
                 </label>
+
                 <input
                     type="number"
                     id="altura"
@@ -39,87 +100,161 @@
                     min="0.1"
                     step="0.01"
                 >
+
             </div>
-            <button type="button" id="calcular-imc">
+
+
+            <button
+                type="button"
+                id="calcular-imc"
+            >
                 Calcular IMC
             </button>
+
+
             <div class="resultado-calculadora">
+
                 <h3>Seu IMC</h3>
+
                 <p id="resultado-imc">
                     --
                 </p>
+
                 <span id="classificacao-imc">
                     Preencha os dados acima
                 </span>
+
             </div>
+
         </section>
+
+
         <section class="calculadora-card">
+
             <h2>Ingestão de Água</h2>
+
             <p>
-                Calcule a quantidade recomendada de água
-                considerando seu peso e tempo de treino.
+                Calcule sua recomendação diária de água.
             </p>
+
+
             <div class="campo-calculadora">
+
                 <label for="peso-agua">
                     Peso (kg)
                 </label>
+
                 <input
                     type="number"
                     id="peso-agua"
                     placeholder="Ex: 70"
                     min="1"
                 >
+
             </div>
+
+
             <div class="campo-calculadora">
+
                 <label for="tempo-treino">
                     Tempo de treino (minutos)
                 </label>
+
                 <input
                     type="number"
                     id="tempo-treino"
                     placeholder="Ex: 60"
                     min="0"
                 >
+
             </div>
-            <button type="button" id="calcular-agua">
+
+
+            <button
+                type="button"
+                id="calcular-agua"
+            >
                 Calcular Água
             </button>
+
+
             <div class="resultado-calculadora">
+
                 <h3>Recomendação diária</h3>
+
                 <p id="resultado-agua">
                     --
                 </p>
+
                 <span>
                     Litros de água por dia
                 </span>
+
             </div>
+
         </section>
+
+
         <section class="calculadora-card cronometro-card">
+
             <h2>Cronômetro de Treino</h2>
+
             <p>
                 Marque quanto tempo seu treino está durando.
             </p>
+
+
             <div class="cronometro-display">
+
                 <p id="cronometro">
                     00:00:00
                 </p>
+
             </div>
+
+
             <div class="botoes-cronometro">
-                <button type="button" id="iniciar-cronometro">
+
+                <button
+                    type="button"
+                    id="iniciar-cronometro"
+                >
                     Iniciar
                 </button>
-                <button type="button" id="pausar-cronometro">
+
+
+                <button
+                    type="button"
+                    id="pausar-cronometro"
+                >
                     Pausar
                 </button>
-                <button type="button" id="zerar-cronometro">
+
+
+                <button
+                    type="button"
+                    id="zerar-cronometro"
+                >
                     Zerar
                 </button>
+
             </div>
-            <button type="button" id="usar-tempo-cronometro">
+
+
+            <button
+                type="button"
+                id="usar-tempo-cronometro"
+            >
                 Usar tempo na calculadora de água
             </button>
+
         </section>
+
     </main>
+
+
     <script src="script.js"></script>
+
 </body>
+
 </html>

@@ -995,3 +995,554 @@ Dashboard - FitLife
 }
 
 /* #endregion */
+
+/* ========================
+Dashboard - FitLife
+======================== */
+
+.pagina-dashboard {
+    min-height: 100vh;
+    background-color: var(--fundo);
+}
+
+
+/* Conteúdo principal */
+
+.conteudo-dashboard {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 40px 0 60px;
+}
+
+
+/* Boas-vindas */
+
+.boas-vindas {
+    margin-bottom: 40px;
+}
+
+.boas-vindas h1 {
+    margin-bottom: 5px;
+
+    color: var(--verde);
+
+    font-size: 32px;
+}
+
+.boas-vindas p {
+    margin-top: 0;
+
+    font-size: 17px;
+}
+
+
+/* ========================
+Metas da semana
+======================== */
+
+.metas-semana {
+    margin-bottom: 45px;
+}
+
+.metas-semana h2 {
+    margin-bottom: 20px;
+}
+
+.cards-metas {
+    display: flex;
+
+    gap: 20px;
+}
+
+.card-meta {
+    flex: 1;
+
+    background-color: var(--card);
+
+    padding: 25px;
+
+    border: 1px solid #303030;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.card-meta:hover {
+    border-color: var(--verde);
+
+    transform: translateY(-3px);
+}
+
+.card-meta h3 {
+    margin-top: 0;
+
+    color: var(--verde);
+}
+
+.card-meta p {
+    margin-bottom: 0;
+}
+
+
+/* ========================
+Progresso da semana
+======================== */
+
+.progresso-semana {
+    background-color: var(--card);
+
+    padding: 25px;
+
+    margin-bottom: 45px;
+
+    border-radius: 12px;
+    border: 1px solid #303030;
+}
+
+.progresso-semana h2 {
+    margin-top: 0;
+}
+
+.progresso-item {
+    margin-bottom: 20px;
+}
+
+.progresso-item p {
+    margin-bottom: 8px;
+
+    color: var(--branco);
+}
+
+.barra {
+    width: 100%;
+    height: 12px;
+
+    background-color: #333333;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.barra-preenchida {
+    height: 100%;
+
+    background-color: var(--verde);
+
+    border-radius: 20px;
+}
+
+
+/* porcentagens */
+
+.barra-preenchida.treinos {
+    width: 60%;
+}
+
+.barra-preenchida.agua {
+    width: 85%;
+}
+
+.barra-preenchida.aulas {
+    width: 67%;
+}
+
+
+/* ========================
+Próximas aulas
+======================== */
+
+.proximas-aulas {
+    margin-bottom: 45px;
+}
+
+.aula {
+    background-color: var(--card);
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-left: 4px solid var(--verde);
+    border-radius: 8px;
+}
+
+.aula h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.aula p {
+    margin: 0;
+}
+
+
+/* ========================
+Dicas de saúde
+======================== */
+
+.dicas-saude {
+    margin-bottom: 40px;
+}
+
+.dicas-saude {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.dicas-saude h2 {
+    width: 100%;
+}
+
+.dica {
+    flex: 1;
+
+    min-width: 220px;
+
+    background-color: var(--card);
+
+    padding: 20px;
+
+    border: 1px solid #303030;
+    border-radius: 12px;
+}
+
+.dica h3 {
+    margin-top: 0;
+
+    color: var(--verde);
+}
+
+
+/* ========================
+Dashboard no celular
+======================== */
+
+@media (max-width: 700px) {
+
+    .cards-metas {
+        flex-direction: column;
+    }
+
+    .conteudo-dashboard {
+        width: 90%;
+        padding-top: 25px;
+    }
+
+    .links-menu {
+        gap: 12px;
+    }
+
+}
+
+/* ========================
+Resultados dos alunos
+======================== */
+
+.resultados-clientes {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.resultados-clientes h2 {
+    margin-bottom: 5px;
+
+    color: var(--verde);
+
+    font-size: 28px;
+}
+
+.resultados-clientes > p {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.lista-resultados {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.resultado-card {
+    padding: 25px;
+
+    background-color: var(--card);
+
+    border: 1px solid #303030;
+    border-radius: 16px;
+}
+
+.resultado-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: var(--branco);
+}
+
+.antes-depois {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.foto-resultado {
+    flex: 1;
+
+    text-align: center;
+}
+
+.foto-resultado span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--verde);
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.foto-resultado img {
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 12px;
+    border: 2px solid #303030;
+}
+
+.seta-evolucao {
+    color: var(--verde);
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/* celular */
+
+@media (max-width: 700px) {
+
+    .antes-depois {
+        flex-direction: column;
+    }
+
+    .seta-evolucao {
+        transform: rotate(90deg);
+    }
+
+    .foto-resultado {
+        width: 100%;
+    }
+
+}
+
+/* ========================
+PERFIL
+======================== */
+
+.body-perfil {
+    min-height: 100vh;
+    background-color: var(--fundo);
+}
+
+.perfil-header {
+    padding: 25px 8%;
+
+    background-color: rgba(17, 17, 17, 0.95);
+
+    border-bottom: 3px solid var(--verde);
+}
+
+.perfil-header h1 {
+    margin: 0;
+
+    color: var(--verde);
+}
+
+.perfil-header p {
+    margin: 5px 0 0;
+}
+
+.pagina-perfil {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 35px 0 60px;
+}
+
+.perfil-card {
+    margin-bottom: 25px;
+
+    padding: 25px;
+
+    background-color: var(--card);
+
+    border: 1px solid #303030;
+    border-radius: 16px;
+}
+
+.perfil-card h2 {
+    margin-top: 0;
+
+    color: var(--verde);
+}
+
+.dados-perfil {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.dados-perfil div {
+    padding: 15px;
+
+    background-color: #292929;
+
+    border-radius: 10px;
+}
+
+.dados-perfil span {
+    color: var(--cinza);
+
+    font-size: 14px;
+}
+
+.dados-perfil p {
+    margin-bottom: 0;
+
+    color: var(--branco);
+
+    font-weight: bold;
+}
+
+.plano-atual {
+    padding: 20px;
+
+    background-color: #292929;
+
+    border-left: 4px solid var(--verde);
+
+    border-radius: 10px;
+}
+
+.plano-atual h3 {
+    margin-top: 0;
+
+    color: var(--branco);
+}
+
+.plano-atual span {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 7px 12px;
+
+    background-color: var(--verde);
+
+    color: var(--fundo);
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.avaliacao {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.avaliacao div {
+    padding: 20px;
+
+    background-color: #292929;
+
+    border-radius: 10px;
+
+    border: 1px solid #353535;
+}
+
+.avaliacao h3 {
+    margin-top: 0;
+
+    color: var(--verde);
+}
+
+.avaliacao p {
+    margin: 8px 0;
+}
+
+
+/* celular */
+
+@media (max-width: 700px) {
+
+    .dados-perfil {
+        grid-template-columns: 1fr;
+    }
+
+    .avaliacao {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.recuperar-senha {
+    text-align: center;
+}
+
+.recuperar-senha a {
+    color: var(--verde);
+}
+
+.recuperar-senha a:hover {
+    text-decoration: underline;
+}
+
+
+.recuperacao-senha {
+    display: none;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #444444;
+}
+
+
+.recuperacao-senha.ativo {
+    display: block;
+}
+
+
+.recuperacao-senha h3 {
+    color: var(--verde);
+
+    text-align: center;
+}
+
+
+#mensagem-recuperacao {
+    text-align: center;
+
+    margin-top: 10px;
+}
