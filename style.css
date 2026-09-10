@@ -45,6 +45,9 @@ MENU
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
 }
 
 .links-menu {
@@ -66,13 +69,12 @@ MENU
 
 .menu h3 {
     color: black;
+
+    transition: 0.2s;
 }
 
+.menu h2:hover,
 .menu h3:hover {
-    color: white;
-}
-
-.menu h2:hover {
     color: white;
 }
 
@@ -82,6 +84,10 @@ LOGIN
 ======================== */
 
 .pagina-login {
+    min-height: 100vh;
+
+    margin: 0;
+
     background:
         linear-gradient(
             rgba(17, 17, 17, 0.75),
@@ -98,17 +104,14 @@ LOGIN
     display: flex;
     justify-content: center;
     align-items: center;
-
-    min-height: 100vh;
-
-    margin: 0;
 }
 
 .caixa-login {
-    background-color: rgba(28, 28, 28, 0);
+    width: 320px;
 
     padding: 30px;
-    width: 320px;
+
+    background-color: rgba(28, 28, 28, 0);
 
     display: flex;
     flex-direction: column;
@@ -248,36 +251,10 @@ RECUPERAÇÃO DE SENHA
 
 
 /* ========================
-LOGIN NO CELULAR
-======================== */
-
-@media (max-width: 500px) {
-
-    .pagina-login {
-        padding: 20px;
-
-        background-position: center;
-
-        box-sizing: border-box;
-    }
-
-    .caixa-login {
-        width: 100%;
-        max-width: 320px;
-
-        padding: 25px;
-    }
-
-}
-
-
-/* ========================
 CALCULADORA
 ======================== */
 
 .body-calculadora {
-    margin: 0;
-
     min-height: 100vh;
 
     background:
@@ -293,23 +270,16 @@ CALCULADORA
     background-attachment: fixed;
 
     color: var(--branco);
-
-    font-family: Arial, sans-serif;
-
-    display: block;
 }
-
-
-/* Cabeçalho */
 
 .calculadora-header {
     width: 100%;
 
     box-sizing: border-box;
 
-    background-color: rgba(17, 17, 17, 0.92);
-
     padding: 25px 8%;
+
+    background-color: rgba(17, 17, 17, 0.92);
 
     border-bottom: 3px solid var(--verde);
 }
@@ -324,12 +294,7 @@ CALCULADORA
 
 .calculadora-header p {
     margin: 5px 0 0;
-
-    color: var(--cinza);
 }
-
-
-/* Conteúdo */
 
 .pagina-calculadora {
     width: 100%;
@@ -348,16 +313,13 @@ CALCULADORA
     gap: 25px;
 }
 
-
-/* Cards */
-
 .calculadora-card {
+    padding: 30px;
+
     background-color: rgba(28, 28, 28, 0.95);
 
     border: 1px solid #303030;
     border-radius: 18px;
-
-    padding: 30px;
 
     box-sizing: border-box;
 
@@ -373,21 +335,14 @@ CALCULADORA
 .calculadora-card h2 {
     margin-top: 0;
     margin-bottom: 8px;
-
-    color: var(--branco);
 }
 
 .calculadora-card > p {
     margin-top: 0;
     margin-bottom: 25px;
 
-    color: var(--cinza);
-
     line-height: 1.5;
 }
-
-
-/* Campos */
 
 .campo-calculadora {
     display: flex;
@@ -399,71 +354,39 @@ CALCULADORA
 .campo-calculadora label {
     margin-bottom: 8px;
 
-    color: var(--branco);
-
-    font-size: 14px;
     font-weight: bold;
 }
 
 .campo-calculadora input {
-    width: 100%;
-
-    box-sizing: border-box;
-
-    padding: 14px;
     margin: 0;
 
+    padding: 14px;
+
     background-color: #292929;
-    color: var(--branco);
 
     border: 2px solid transparent;
     border-radius: 10px;
-
-    outline: none;
 
     font-size: 16px;
 
     transition: 0.3s;
 }
 
-.campo-calculadora input::placeholder {
-    color: #777777;
-}
-
 .campo-calculadora input:focus {
     border-color: var(--verde);
 }
 
-
-/* Botões */
+.campo-calculadora input::placeholder {
+    color: #777777;
+}
 
 .calculadora-card button {
-    width: 100%;
-
     padding: 14px;
 
-    background-color: var(--verde);
-    color: var(--fundo);
-
-    border: none;
     border-radius: 10px;
 
     font-size: 16px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.2s;
 }
-
-.calculadora-card button:hover {
-    background-color: #9FE62F;
-
-    transform: translateY(-2px);
-}
-
-
-/* Resultado */
 
 .resultado-calculadora {
     margin-top: 25px;
@@ -496,12 +419,7 @@ CALCULADORA
 
 .resultado-calculadora span {
     color: var(--branco);
-
-    font-size: 14px;
 }
-
-
-/* Cronômetro */
 
 .cronometro-card {
     grid-column: 1 / -1;
@@ -553,58 +471,17 @@ CALCULADORA
 }
 
 
-/* Calculadora no celular */
-
-@media (max-width: 700px) {
-
-    .pagina-calculadora {
-        grid-template-columns: 1fr;
-
-        padding: 25px 15px 50px;
-    }
-
-    .cronometro-card {
-        grid-column: auto;
-    }
-
-    .botoes-cronometro {
-        grid-template-columns: 1fr;
-    }
-
-    #cronometro {
-        font-size: 36px;
-
-        letter-spacing: 1px;
-    }
-
-    .calculadora-header {
-        padding: 20px;
-    }
-
-}
-
-
 /* ========================
 TREINOS
 ======================== */
 
 .body-treinos {
-    margin: 0;
-
     min-height: 100vh;
 
-    display: block;
-
-    background: var(--fundo);
-    color: var(--branco);
-
-    font-family: Arial, sans-serif;
-
     position: relative;
+
+    background-color: var(--fundo);
 }
-
-
-/* Fundo */
 
 .body-treinos::before {
     content: "";
@@ -633,9 +510,6 @@ TREINOS
     z-index: 1;
 }
 
-
-/* Cabeçalho */
-
 .treino-header {
     width: 100%;
 
@@ -658,12 +532,7 @@ TREINOS
 
 .treino-header p {
     margin: 5px 0 0;
-
-    color: var(--cinza);
 }
-
-
-/* Conteúdo */
 
 .pagina-treinos {
     width: 100%;
@@ -676,13 +545,10 @@ TREINOS
     padding: 35px 20px 60px;
 }
 
-
-/* Progresso */
-
 .resumo-treino {
-    padding: 25px;
-
     margin-bottom: 35px;
+
+    padding: 25px;
 
     background-color: rgba(28, 28, 28, 0.95);
 
@@ -692,14 +558,10 @@ TREINOS
 
 .resumo-treino p {
     margin: 0 0 15px;
-
-    color: var(--cinza);
 }
 
 .resumo-treino h2 {
     margin: 0 0 15px;
-
-    color: var(--branco);
 }
 
 .barra-progresso {
@@ -724,9 +586,6 @@ TREINOS
     transition: width 0.4s;
 }
 
-
-/* Grupos */
-
 .grupo-treino {
     margin-bottom: 35px;
 }
@@ -744,20 +603,11 @@ TREINOS
 
 .titulo-grupo h2 {
     margin: 0;
-
-    color: var(--branco);
-
-    font-size: 25px;
 }
 
 .titulo-grupo span {
     color: var(--cinza);
-
-    font-size: 14px;
 }
-
-
-/* Cards */
 
 .card-exercicio {
     display: flex;
@@ -780,17 +630,13 @@ TREINOS
 }
 
 .card-exercicio:hover {
-    transform: translateY(-3px);
-
     border-color: var(--verde);
+
+    transform: translateY(-3px);
 }
 
 .info-exercicio h3 {
     margin: 0 0 12px;
-
-    color: var(--branco);
-
-    font-size: 19px;
 }
 
 .dados-exercicio {
@@ -811,9 +657,6 @@ TREINOS
 
     font-size: 14px;
 }
-
-
-/* Botão concluir */
 
 .botao-concluir {
     cursor: pointer;
@@ -855,52 +698,26 @@ TREINOS
 }
 
 
-/* Treino no celular */
-
-@media (max-width: 600px) {
-
-    .treino-header {
-        padding: 20px;
-    }
-
-    .pagina-treinos {
-        padding: 25px 15px 50px;
-    }
-
-    .card-exercicio {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .botao-concluir {
-        width: 100%;
-    }
-
-    .botao-concluir span {
-        display: block;
-
-        text-align: center;
-    }
-
-}
-
-
 /* ========================
 AULAS
 ======================== */
 
 .body-aulas {
-    margin: 0;
-
     min-height: 100vh;
 
-    display: block;
+    background:
+        linear-gradient(
+            rgba(17, 17, 17, 0.82),
+            rgba(17, 17, 17, 0.82)
+        ),
+        url("imagens/fundodaulas.jpg");
 
-    background: var(--fundo);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     color: var(--branco);
-
-    font-family: Arial, sans-serif;
 }
 
 .aulas-header {
@@ -910,7 +727,7 @@ AULAS
 
     padding: 25px 8%;
 
-    background-color: rgba(17, 17, 17, 0.95);
+    background-color: rgba(17, 17, 17, 0.92);
 
     border-bottom: 3px solid var(--verde);
 }
@@ -925,8 +742,6 @@ AULAS
 
 .aulas-header p {
     margin: 5px 0 0;
-
-    color: var(--cinza);
 }
 
 .pagina-aulas {
@@ -947,15 +762,11 @@ AULAS
 .titulo-aulas h2 {
     margin: 0 0 8px;
 
-    color: var(--branco);
-
     font-size: 28px;
 }
 
 .titulo-aulas p {
     margin: 0;
-
-    color: var(--cinza);
 }
 
 .grade-aulas {
@@ -982,9 +793,9 @@ AULAS
 }
 
 .card-aula:hover {
-    transform: translateY(-3px);
-
     border-color: var(--verde);
+
+    transform: translateY(-3px);
 }
 
 .info-aula h3 {
@@ -999,8 +810,6 @@ AULAS
 .info-aula p {
     margin-top: 0;
     margin-bottom: 20px;
-
-    color: var(--cinza);
 
     line-height: 1.5;
 }
@@ -1027,28 +836,11 @@ AULAS
 }
 
 .card-aula .botao-agendar {
-    width: 100%;
-
     padding: 12px;
 
-    background-color: var(--verde);
-    color: var(--fundo);
-
-    border: none;
     border-radius: 10px;
 
     font-size: 15px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.card-aula .botao-agendar:hover {
-    background-color: #9FE62F;
-
-    transform: translateY(-2px);
 }
 
 .card-aula .botao-agendar.agendado {
@@ -1072,12 +864,6 @@ AULAS
 
 .minhas-aulas h2 {
     margin-top: 0;
-
-    color: var(--branco);
-}
-
-#mensagem-aulas {
-    color: var(--cinza);
 }
 
 #lista-aulas-agendadas {
@@ -1115,31 +901,6 @@ AULAS
 }
 
 
-/* Aulas no celular */
-
-@media (max-width: 700px) {
-
-    .aulas-header {
-        padding: 20px;
-    }
-
-    .pagina-aulas {
-        padding: 25px 15px 50px;
-    }
-
-    .grade-aulas {
-        grid-template-columns: 1fr;
-    }
-
-    .aula-agendada {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-}
-
-
 /* ========================
 DASHBOARD
 ======================== */
@@ -1147,7 +908,17 @@ DASHBOARD
 .pagina-dashboard {
     min-height: 100vh;
 
-    background-color: var(--fundo);
+    background:
+        linear-gradient(
+            rgba(17, 17, 17, 0.78),
+            rgba(17, 17, 17, 0.78)
+        ),
+        url("imagens/fundodashboard.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .conteudo-dashboard {
@@ -1158,9 +929,6 @@ DASHBOARD
 
     padding: 40px 0 60px;
 }
-
-
-/* Boas-vindas */
 
 .boas-vindas {
     margin-bottom: 40px;
@@ -1200,9 +968,9 @@ DASHBOARD
 .card-meta {
     flex: 1;
 
-    background-color: var(--card);
-
     padding: 25px;
+
+    background-color: rgba(28, 28, 28, 0.95);
 
     border: 1px solid #303030;
     border-radius: 12px;
@@ -1230,11 +998,11 @@ DASHBOARD
 /* Progresso */
 
 .progresso-semana {
-    background-color: var(--card);
+    margin-bottom: 45px;
 
     padding: 25px;
 
-    margin-bottom: 45px;
+    background-color: rgba(28, 28, 28, 0.95);
 
     border: 1px solid #303030;
     border-radius: 12px;
@@ -1266,6 +1034,7 @@ DASHBOARD
 }
 
 .barra-preenchida {
+    width: 0%;
     height: 100%;
 
     background-color: var(--verde);
@@ -1273,18 +1042,6 @@ DASHBOARD
     border-radius: 20px;
 
     transition: width 0.4s;
-}
-
-.barra-preenchida.treinos {
-    width: 60%;
-}
-
-.barra-preenchida.agua {
-    width: 85%;
-}
-
-.barra-preenchida.aulas {
-    width: 67%;
 }
 
 
@@ -1295,11 +1052,11 @@ DASHBOARD
 }
 
 .aula {
-    background-color: var(--card);
+    margin-bottom: 15px;
 
     padding: 20px;
 
-    margin-bottom: 15px;
+    background-color: rgba(28, 28, 28, 0.95);
 
     border-left: 4px solid var(--verde);
     border-radius: 8px;
@@ -1312,6 +1069,13 @@ DASHBOARD
 
 .aula p {
     margin: 0;
+}
+
+
+/* Dados de saúde */
+
+.resumo-saude {
+    margin-bottom: 45px;
 }
 
 
@@ -1336,9 +1100,9 @@ DASHBOARD
 
     min-width: 220px;
 
-    background-color: var(--card);
-
     padding: 20px;
+
+    background-color: rgba(28, 28, 28, 0.95);
 
     border: 1px solid #303030;
     border-radius: 12px;
@@ -1384,7 +1148,7 @@ RESULTADOS DOS ALUNOS
 .resultado-card {
     padding: 25px;
 
-    background-color: var(--card);
+    background-color: rgba(28, 28, 28, 0.95);
 
     border: 1px solid #303030;
     border-radius: 16px;
@@ -1393,8 +1157,6 @@ RESULTADOS DOS ALUNOS
 .resultado-card h3 {
     margin-top: 0;
     margin-bottom: 20px;
-
-    color: var(--branco);
 }
 
 .antes-depois {
@@ -1423,9 +1185,6 @@ RESULTADOS DOS ALUNOS
     font-weight: bold;
 }
 
-
-/* Fotos normais */
-
 .foto-resultado img {
     width: 100%;
     height: 420px;
@@ -1435,58 +1194,31 @@ RESULTADOS DOS ALUNOS
 
     display: block;
 
-    border-radius: 12px;
     border: 2px solid #303030;
+    border-radius: 12px;
+
+    box-sizing: border-box;
 }
 
 
-/* Fotos específicas do Gerson */
+/* Fotos específicas */
 
 .resultado-gerson .foto-resultado img {
-    width: 100%;
     height: auto;
 
     object-fit: initial;
     object-position: initial;
-
-    display: block;
-
-    border-radius: 12px;
-    border: 2px solid #303030;
 }
-
-
-/* Alinha as fotos do Gerson pelo topo */
 
 .resultado-gerson .antes-depois {
     align-items: flex-start;
 }
-
 
 .seta-evolucao {
     color: var(--verde);
 
     font-size: 40px;
     font-weight: bold;
-}
-
-
-/* Resultados no celular */
-
-@media (max-width: 700px) {
-
-    .antes-depois {
-        flex-direction: column;
-    }
-
-    .seta-evolucao {
-        transform: rotate(90deg);
-    }
-
-    .foto-resultado {
-        width: 100%;
-    }
-
 }
 
 
@@ -1497,13 +1229,23 @@ PERFIL
 .body-perfil {
     min-height: 100vh;
 
-    background-color: var(--fundo);
+    background:
+        linear-gradient(
+            rgba(17, 17, 17, 0.85),
+            rgba(17, 17, 17, 0.85)
+        ),
+        url("imagens/fundoperfil.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .perfil-header {
     padding: 25px 8%;
 
-    background-color: rgba(17, 17, 17, 0.95);
+    background-color: rgba(17, 17, 17, 0.92);
 
     border-bottom: 3px solid var(--verde);
 }
@@ -1532,7 +1274,7 @@ PERFIL
 
     padding: 25px;
 
-    background-color: var(--card);
+    background-color: rgba(28, 28, 28, 0.95);
 
     border: 1px solid #303030;
     border-radius: 16px;
@@ -1658,6 +1400,9 @@ CELULAR
         font-size: 14px;
     }
 
+
+    /* Dashboard */
+
     .cards-metas {
         flex-direction: column;
     }
@@ -1668,12 +1413,187 @@ CELULAR
         padding-top: 25px;
     }
 
+
+    /* Resultados */
+
+    .antes-depois {
+        flex-direction: column;
+    }
+
+    .seta-evolucao {
+        transform: rotate(90deg);
+    }
+
+    .foto-resultado {
+        width: 100%;
+    }
+
+
+    /* Calculadora */
+
+    .pagina-calculadora {
+        grid-template-columns: 1fr;
+
+        padding: 25px 15px 50px;
+    }
+
+    .cronometro-card {
+        grid-column: auto;
+    }
+
+    .botoes-cronometro {
+        grid-template-columns: 1fr;
+    }
+
+    #cronometro {
+        font-size: 36px;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* Aulas */
+
+    .pagina-aulas {
+        padding: 25px 15px 50px;
+    }
+
+    .grade-aulas {
+        grid-template-columns: 1fr;
+    }
+
+    .aula-agendada {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    /* Treinos */
+
+    .pagina-treinos {
+        padding: 25px 15px 50px;
+    }
+
+    .card-exercicio {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .botao-concluir {
+        width: 100%;
+    }
+
+    .botao-concluir span {
+        display: block;
+
+        text-align: center;
+    }
+
+
+    /* Perfil */
+
     .dados-perfil {
         grid-template-columns: 1fr;
     }
 
     .avaliacao {
         grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================
+LOGIN NO CELULAR
+======================== */
+
+@media (max-width: 500px) {
+
+    .pagina-login {
+        padding: 20px;
+
+        box-sizing: border-box;
+    }
+
+    .caixa-login {
+        width: 100%;
+        max-width: 320px;
+
+        padding: 25px;
+    }
+
+}
+
+/* ========================
+ALINHAMENTO GERAL DAS PÁGINAS
+======================== */
+
+.menu {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 10%;
+}
+
+
+/* Cabeçalhos */
+
+.aulas-header,
+.treino-header,
+.calculadora-header,
+.perfil-header {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 25px 10%;
+}
+
+
+/* Conteúdo das páginas */
+
+.pagina-aulas,
+.pagina-treinos,
+.pagina-calculadora,
+.pagina-perfil,
+.conteudo-dashboard {
+    width: 80%;
+    max-width: 1100px;
+
+    box-sizing: border-box;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ========================
+CELULAR
+======================== */
+
+@media (max-width: 700px) {
+
+    .menu {
+        padding: 15px 20px;
+    }
+
+    .aulas-header,
+    .treino-header,
+    .calculadora-header,
+    .perfil-header {
+        padding: 25px 20px;
+    }
+
+    .pagina-aulas,
+    .pagina-treinos,
+    .pagina-calculadora,
+    .pagina-perfil,
+    .conteudo-dashboard {
+        width: calc(100% - 40px);
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
