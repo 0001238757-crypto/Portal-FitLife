@@ -12,6 +12,65 @@
 /* #region informações gerais do site */
 
 body {
+    margin: 0;
+
+    background-color: var(--fundo);
+    color: var(--branco);
+
+    font-family: Arial, sans-serif;
+}
+
+p {
+    color: var(--cinza);
+}
+
+.menu {
+    background-color: var(--verde);
+
+    padding: 10px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.links-menu h3 {
+    margin: 0;
+}
+
+.menu h2 {
+    color: black;
+    margin: 0;
+}
+
+.menu h3 {
+    color: black;
+}
+
+.menu h3:hover {
+    color: white;
+}
+
+.menu h2:hover {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* #endregion */
+
+
+/* #region parte do login */
+
+.pagina-login {
     background:
         linear-gradient(
             rgba(17, 17, 17, 0.75),
@@ -32,15 +91,6 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
-p {
-    color: var(--cinza);
-}
-
-/* #endregion */
-
-
-/* #region parte do login */
 
 .caixa-login {
     background-color: rgba(28, 28, 28, 0.0);
@@ -149,19 +199,17 @@ button:hover {
 
 @media (max-width: 500px) {
 
-    body {
+    .pagina-login {
         padding: 20px;
-
         background-position: center;
+        box-sizing: border-box;
     }
 
     .caixa-login {
         width: 100%;
         max-width: 320px;
-
         padding: 25px;
     }
-
 }
 
 /* #endregion */
@@ -631,3 +679,12 @@ Celular
     }
 }
 /*#endregion*/
+
+/* ========================
+Dashboard - FitLife
+======================== */
+
+.pagina-dashboard {
+    min-height: 100vh;
+    background-color: var(--fundo);
+}
