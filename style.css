@@ -1298,6 +1298,10 @@ Resultados dos alunos
     text-align: center;
 }
 
+.resultado-gerson .foto-resultado img {
+    object-position: center 65%;
+}
+
 .foto-resultado span {
     display: block;
 
