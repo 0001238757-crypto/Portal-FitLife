@@ -688,3 +688,310 @@ Dashboard - FitLife
     min-height: 100vh;
     background-color: var(--fundo);
 }
+
+/* #region Aulas - Fit Life */
+
+.body-aulas {
+    margin: 0;
+    min-height: 100vh;
+
+    display: block;
+
+    background: var(--fundo);
+
+    color: var(--branco);
+
+    font-family: Arial, sans-serif;
+}
+
+/* #endregion */
+
+
+/* #region Cabeçalho das Aulas */
+
+.aulas-header {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 25px 8%;
+
+    background-color: rgba(17, 17, 17, 0.95);
+
+    border-bottom: 3px solid var(--verde);
+}
+
+.aulas-header h1 {
+    margin: 0;
+
+    color: var(--verde);
+
+    font-size: 32px;
+}
+
+.aulas-header p {
+    margin: 5px 0 0;
+
+    color: var(--cinza);
+}
+
+/* #endregion */
+
+
+/* #region Página de Aulas */
+
+.pagina-aulas {
+    width: 100%;
+    max-width: 1000px;
+
+    box-sizing: border-box;
+
+    margin: 0 auto;
+
+    padding: 35px 20px 60px;
+}
+
+/* #endregion */
+
+
+/* #region Título das Aulas */
+
+.titulo-aulas {
+    margin-bottom: 30px;
+}
+
+.titulo-aulas h2 {
+    margin: 0 0 8px;
+
+    color: var(--branco);
+
+    font-size: 28px;
+}
+
+.titulo-aulas p {
+    margin: 0;
+
+    color: var(--cinza);
+}
+
+/* #endregion */
+
+
+/* #region Grade de Aulas */
+
+.grade-aulas {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+}
+
+/* #endregion */
+
+
+/* #region Cards das Aulas */
+
+.card-aula {
+    padding: 25px;
+
+    background-color: rgba(28, 28, 28, 0.95);
+
+    border: 1px solid #303030;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    transition: 0.3s;
+}
+
+.card-aula:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--verde);
+}
+
+.info-aula h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    color: var(--verde);
+
+    font-size: 22px;
+}
+
+.info-aula p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: var(--cinza);
+
+    line-height: 1.5;
+}
+
+/* #endregion */
+
+
+/* #region Informações das Aulas */
+
+.dados-aula {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.dados-aula span {
+    padding: 7px 10px;
+
+    background-color: #292929;
+
+    color: var(--branco);
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+/* #endregion */
+
+
+/* #region Botão Agendar */
+
+.card-aula .botao-agendar {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: var(--verde);
+
+    color: var(--fundo);
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.card-aula .botao-agendar:hover {
+    background-color: #9FE62F;
+
+    transform: translateY(-2px);
+}
+
+.card-aula .botao-agendar.agendado {
+    background-color: #FF4D4D;
+
+    color: var(--branco);
+}
+
+.card-aula .botao-agendar.agendado:hover {
+    background-color: #D93C3C;
+}
+
+/* #endregion */
+
+
+/* #region Minhas Aulas */
+
+.minhas-aulas {
+    padding: 25px;
+
+    background-color: rgba(28, 28, 28, 0.95);
+
+    border: 1px solid #303030;
+
+    border-radius: 18px;
+}
+
+.minhas-aulas h2 {
+    margin-top: 0;
+
+    color: var(--branco);
+}
+
+#mensagem-aulas {
+    color: var(--cinza);
+}
+
+#lista-aulas-agendadas {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+/* #endregion */
+
+
+/* #region Aula Agendada */
+
+.aula-agendada {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    background-color: #292929;
+
+    border-left: 4px solid var(--verde);
+
+    border-radius: 10px;
+}
+
+.aula-agendada strong {
+    color: var(--branco);
+}
+
+.aula-agendada span {
+    color: var(--cinza);
+}
+
+/* #endregion */
+
+
+/* #region Aulas no Celular */
+
+@media (max-width: 700px) {
+
+    .aulas-header {
+        padding: 20px;
+    }
+
+    .pagina-aulas {
+        padding: 25px 15px 50px;
+    }
+
+    .grade-aulas {
+        grid-template-columns: 1fr;
+    }
+
+    .aula-agendada {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+/* #endregion */

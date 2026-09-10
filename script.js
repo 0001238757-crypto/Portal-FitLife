@@ -205,3 +205,71 @@ if (usarTempoCronometro) {
         }
     );
 }
+const botoesAgendar =
+    document.querySelectorAll(".botao-agendar");
+
+const listaAulas =
+    document.getElementById("lista-aulas-agendadas");
+
+const mensagemAulas =
+    document.getElementById("mensagem-aulas");
+
+if (botoesAgendar.length > 0) {
+
+    botoesAgendar.forEach(function(botao) {
+
+        botao.addEventListener("click", function() {
+
+            const nomeAula =
+                botao.getAttribute("data-aula");
+
+            const aulaExistente =
+                document.querySelector(
+                    '.aula-agendada[data-aula="' + nomeAula + '"]'
+                );
+
+            if (aulaExistente) {
+
+                aulaExistente.remove();
+
+                botao.textContent = "Agendar";
+                botao.classList.remove("agendado");
+
+            } else {
+
+                const card =
+                    botao.closest(".card-aula");
+
+                const horario =
+                    card.querySelector(".dados-aula").textContent
+                        .replace(/\s+/g, " ")
+                        .trim();
+
+                const novaAula =
+                    document.createElement("div");
+
+                novaAula.classList.add("aula-agendada");
+                novaAula.setAttribute("data-aula", nomeAula);
+
+                novaAula.innerHTML =
+                    "<strong>" + nomeAula + "</strong>" +
+                    "<span>" + horario + "</span>";
+
+                listaAulas.appendChild(novaAula);
+
+                botao.textContent = "Cancelar";
+                botao.classList.add("agendado");
+
+            }
+
+            if (listaAulas.children.length > 0) {
+                mensagemAulas.style.display = "none";
+            } else {
+                mensagemAulas.style.display = "block";
+            }
+
+        });
+
+    });
+
+}

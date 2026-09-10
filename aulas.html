@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas - Fit Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-aulas">
+    <header class="aulas-header">
+        <div>
+            <h1>Fit Life</h1>
+            <p>Agendamento de Aulas</p>
+        </div>
+    </header>
+    <main class="pagina-aulas">
+        <section class="titulo-aulas">
+            <h2>Aulas disponíveis</h2>
+            <p>
+                Escolha uma aula e reserve sua vaga.
+            </p>
+        </section>
+        <section class="grade-aulas">
+            <div class="card-aula">
+                <div class="info-aula">
+                    <h3>Crossfit</h3>
+                    <p>
+                        Treino de força e condicionamento físico.
+                    </p>
+                    <div class="dados-aula">
+                        <span>Segunda-feira</span>
+                        <span>08:00</span>
+                        <span>60 min</span>
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="botao-agendar"
+                    data-aula="Crossfit"
+                >
+                    Agendar
+                </button>
+            </div>
+            <div class="card-aula">
+                <div class="info-aula">
+                    <h3>Pilates</h3>
+                    <p>
+                        Aula focada em postura, equilíbrio e fortalecimento.
+                    </p>
+                    <div class="dados-aula">
+                        <span>Terça-feira</span>
+                        <span>10:00</span>
+                        <span>50 min</span>
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="botao-agendar"
+                    data-aula="Pilates"
+                >
+                    Agendar
+                </button>
+            </div>
+            <div class="card-aula">
+                <div class="info-aula">
+                    <h3>Yoga</h3>
+                    <p>
+                        Aula de mobilidade, respiração e relaxamento.
+                    </p>
+                    <div class="dados-aula">
+                        <span>Quarta-feira</span>
+                        <span>18:00</span>
+                        <span>60 min</span>
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="botao-agendar"
+                    data-aula="Yoga"
+                >
+                    Agendar
+                </button>
+            </div>
+            <div class="card-aula">
+                <div class="info-aula">
+                    <h3>Natação</h3>
+                    <p>
+                        Aula de resistência e condicionamento na piscina.
+                    </p>
+                    <div class="dados-aula">
+                        <span>Quinta-feira</span>
+                        <span>16:00</span>
+                        <span>60 min</span>
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="botao-agendar"
+                    data-aula="Natação"
+                >
+                    Agendar
+                </button>
+            </div>
+        </section>
+        <section class="minhas-aulas">
+            <h2>Minhas aulas agendadas</h2>
+            <p id="mensagem-aulas">
+                Você ainda não possui aulas agendadas.
+            </p>
+            <div id="lista-aulas-agendadas">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
